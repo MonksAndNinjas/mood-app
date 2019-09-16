@@ -1,5 +1,5 @@
 // fetches data from Rails API
-export function fetchBlogPosts() {
+export function fetchUser() {
   return (dispatch) => {
     dispatch({ type: 'LOADING_USERS' });
 
