@@ -9,6 +9,14 @@ class App extends React.Component {
 
     return (
       <div>
+        { (this.props.userData.loading === false && this.props.userData.users.length !== 0) ? (
+            <div>
+              <span>{this.props.userData.users[0].name}</span>
+            </div>
+          ) : (
+            null
+          )
+        }
       </div>
     );
   }
@@ -19,7 +27,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = state => {
-  
+
   return({
     userData: state.users,
   })
