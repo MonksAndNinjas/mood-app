@@ -18,6 +18,10 @@ class App extends React.Component {
             null
           )
         }
+
+        <br/><br/>
+
+        <a href="/auth/fitbit">Authorize Fitbit</a>
       </div>
     );
   }
