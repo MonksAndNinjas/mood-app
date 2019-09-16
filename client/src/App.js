@@ -9,9 +9,10 @@ class App extends React.Component {
 
     return (
       <div>
+        <h1>Fitbit Mood App</h1>
         { (this.props.userData.loading === false && this.props.userData.users.length !== 0) ? (
             <div>
-              <span>{this.props.userData.users[0].name}</span>
+              <span>Current User: {this.props.userData.users[0].name}</span>
             </div>
           ) : (
             null
