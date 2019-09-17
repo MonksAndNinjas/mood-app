@@ -4,5 +4,5 @@ Rails.application.routes.draw do
     get :user, to: 'users#index'
   end
 
-  get '/auth/fitbit/callback' => 'sessions#create'
+  get '/auth/fitbit/callback', :to => 'sessions#create'
 end

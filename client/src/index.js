@@ -7,11 +7,13 @@ import thunk from 'redux-thunk';
 
 import { combineReducers } from 'redux';
 import userReducer from './reducers/userReducer';
+import fitbitReducer from './reducers/userReducer';
 
 import App from './App';
 
 const rootReducer = combineReducers({
-  users: userReducer
+  users: userReducer,
+  fitbitData: fitbitReducer,
 })
 //import * as serviceWorker from './serviceWorker';
 
