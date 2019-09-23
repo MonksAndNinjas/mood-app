@@ -11,7 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Fitbit Mood App</h1>
+        <h1>Fitbit Mood Tracker</h1>
 
         <a onClick={handleClick()} href="/api/login">Log In</a>
       </div>
