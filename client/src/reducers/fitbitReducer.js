@@ -1,18 +1,17 @@
-// handles user's data from Rails API for use in store
-export default function userReducer(
+export default function fitbitReducer(
   state ={
     loading: false,
-    users: [],
+    fitbitData: [],
   }, action) {
     switch (action.type) {
 
-      case 'LOADING_USERS':
+      case 'LOADING_FITBIT_DATA':
         return {...state, loading: true};
 
-      case 'FETCH_USERS':
+      case 'FETCH_FITBIT_DATA':
         return {loading: false, users: action.payload}
 
       default:
         return state;
-  }
+      }
 };

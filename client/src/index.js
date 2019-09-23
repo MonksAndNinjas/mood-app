@@ -10,6 +10,9 @@ import userReducer from './reducers/userReducer';
 import fitbitReducer from './reducers/userReducer';
 
 import App from './App';
+import Fitbit from './Fitbit';
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const rootReducer = combineReducers({
   users: userReducer,
@@ -21,7 +24,10 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 
 ReactDOM.render((
     <Provider store={store}>
-      <App />
+      <Router>
+        <Route exact path="/fitbit" component={Fitbit} />
+        <App />
+      </Router>
     </Provider>
   ), document.getElementById('root')
 );

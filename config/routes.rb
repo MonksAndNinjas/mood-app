@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   scope '/api' do
-    get :user, to: 'users#index'
+    get '/login', to: "login#create"
+    resources :users
   end
-
-  get '/auth/fitbit/callback', :to => 'sessions#create'
 end

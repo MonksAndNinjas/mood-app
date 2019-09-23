@@ -10,13 +10,18 @@ export function fetchUser() {
   }
 }
 
-export function fetchFitbitData() {
+export function fetchFitbitData(u, a) {
   return (dispatch) => {
     dispatch({ type: 'LOADING_FITBIT_DATA' });
 
-    return fetch('/api', {
-      accept: 'application/json',
+    var bearer = 'Bearer ' + a;
+
+    return fetch('https://api.fitbit.com/1/user/' + u + '/activities/heart/date/today/1w.json', {
+      headers: {
+        'Authorization': bearer,
+        'Content-Type': 'application/json'
+      }
     }).then(response => response.json())
-      .then(fitbitData => dispatch({ type: 'FETCH_FITBIT_DATA', payload: fitbitData }))
+      .then(data => console.log(data))
   }
 }
